@@ -1,0 +1,6 @@
+print("DESCOBRIDOR DE NUMERO MAIOR!!!!!!!!!")
+num1=int(input("fala aí o primeiro número"))
+num2=int(input("fala aí o segundo número"))
+num3=int(input("fala aí o segundo número"))
+maiornumeroresenha=max(num1,num2,num3)
+print("o maior é o",maiornumeroresenha)
