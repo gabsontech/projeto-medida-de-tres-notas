@@ -3,9 +3,8 @@ matriz = [
     ['▢','▢','▢',],
     ['▢','▢','▢',]
 ]
-def istdiebesten():
-    print("parabens!! acabou!!! é campeao!!!")
-    
+def ovo():
+    print("acabou!!ashdbhabsdabdjbsdbads")
 def imprimir_jogo():
     print('  0 1 2')
     for i in range(0,3):
@@ -18,36 +17,19 @@ def muda_matriz():
     linha = int(input("que linha tu quer mudar? 0-2: "))
     coluna = int(input("qual coluna? 0-2: "))
     resposta = str(input("Xis ou bolinha? X-O: "))
-#
-    if matriz[2][2] and matriz[1][1] and matriz[0][0] == "X":
-        istdiebesten()
-    if matriz[0][2] and matriz[1][2] and matriz[2][2] == "X":
-        istdiebesten()
-    if matriz[0][1] and matriz[1][1] and matriz[2][1] == "X":
-        istdiebesten()
-    if matriz[0][0] and matriz[1][0] and matriz[2][0] == "X":
-        istdiebesten()
-    if matriz[1][0] and matriz[1][1] and matriz[1][2] == "X":
-        istdiebesten()
-    if matriz[2][0] and matriz[2][1] and matriz[2][2] == "X":
-        istdiebesten()
-    if matriz[0][2] and matriz[1][1] and matriz[2][0] == "X":
-        istdiebesten()
-    if matriz[2][2] and matriz[1][1] and matriz[0][0] == "O":
-        istdiebesten()
-    if matriz[0][2] and matriz[1][2] and matriz[2][2] == "O":
-        istdiebesten()
-    if matriz[0][1] and matriz[1][1] and matriz[2][1] == "O":
-        istdiebesten()
-    if matriz[0][0] and matriz[1][0] and matriz[2][0] == "O":
-        istdiebesten()
-    if matriz[1][0] and matriz[1][1] and matriz[1][2] == "O":
-        istdiebesten()
-    if matriz[2][0] and matriz[2][1] and matriz[2][2] == "O":
-        istdiebesten()
-    if matriz[0][2] and matriz[1][1] and matriz[2][0] == "O":
-        istdiebesten()
-   #
+    for i in range(0,3):
+        for j in range(0,3):
+            if matriz[i][j] == "X":
+                "O" == False
+            elif matriz[i][j] == "O":
+                "X" == False
+            else:
+                "O" == False
+                "X" == False
+                if "X" == True:
+                    return -1
+                elif "O" == True:
+                    return 1
     if resposta == "X" or resposta == "O":
         matriz[linha][coluna] = resposta
     else:
