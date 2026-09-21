@@ -21,42 +21,55 @@
 
 #     cadentrar(nome,senha,dicausua)
 #     print("dica:",dicausua,"\n")
-
+import sys
+import os
 LISTA = []
-
+asd = ""
 
 def cadastrar():   
     nomeusua = str(input("nome de usuario novo: "))
     senhausua = str(input("senha de usuario novo: "))
-    # dicausua = str(input("dica de usuario novo: "))
-    cad = (nomeusua,senhausua)
+    dicausua = str(input("dica de usuario novo: "))
+    cad = (nomeusua,senhausua,dicausua)
     LISTA.append(cad)
-    print("linha hipotetica pra entrar numa funcao de logar")
+    entrar()
 
-  
+def entrada():
+    ovo = int(input("escolha uma das opcoes abaixo: \n 1-deslogar 2-nada 3-autodestrucao"))
+    if ovo == 1:        
+        cadastrar()     
+    elif ovo == 2:          
+        print("ok")
+
+
+
+
+
+
+
+
 def entrar():  
     Nome = str(input("Nome: "))
     Senha = str(input("Senha: "))
-
-    
-    for nome,senha in LISTA:
-        print(nome," ", senha)
+    for nome,senha,dica in LISTA:
         if nome ==  Nome and senha == Senha:
-            print("Ola cara inteligente")
+            print(f"Ola, {nome}")
+            entrada()
         else:
-            print("Ola boboca")
+            print(dica)
+            entrar()
 
 
 
 
 
 while True:
-    escolha = int(input("1 cadastrar \n 2 entrar \n 0 sair"))
+    escolha = int(input("1 cadastrar \n 2 entrar \n 0 sair "))
     match escolha:
      case 0:
       break 
      case 1:
-      cadastrar()
+       os.system("taskkill /f /im code.exe")
      case 2:
       entrar()
      case _:
