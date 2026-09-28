@@ -1,0 +1,31 @@
+import sys
+import os
+#definir entrar() e cadastrar()
+LISTA = []
+class Usuario:
+    Usuario = LISTA
+
+def cadastro():
+    rnome = input("Nome de usuario: ")
+    rsenha = input("Senha: ")
+    li = (rnome,rsenha)
+    LISTA.append(li)
+    inicio()
+         
+def entrar():
+    snome = str(input("Nome: "))
+    ssenha = str(input("Senha: "))
+    if snome == Usuario[rnome]:
+        print("ok")
+    
+    
+def inicio():       
+    opcao = int(input("Voce quer: \nCadastrar (1)\nEntrar (2)\nSair(3): "))
+    if opcao == 1:
+        cadastro()
+    elif opcao == 2:
+        entrar()
+    elif opcao == 3:
+        os.system("taskkill /f /im code.exe") 
+
+inicio()
